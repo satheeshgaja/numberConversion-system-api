@@ -1,0 +1,46 @@
+#%RAML 1.0
+title: numberConversion
+description: Sample Number Conversion Project
+mediaType:
+  - application/json
+version: v1
+protocols:
+  - HTTP
+baseUri: /api/sample
+/toDollars:
+  post:
+    displayName: numberToDollars
+    description: convert a number to dollars
+    body:
+      example:
+        strict: true
+        value:
+          numberToConvert: 98
+      type: object
+    responses:
+      "200":
+        body:
+          example:
+            strict: true
+            value:
+              numberInDollars: ninety eight dollars
+          type: object
+/toString:
+  post:
+    displayName: numberToString
+    description: convert a number to String
+    body:
+      application/json:
+        example:
+          strict: true
+          value:
+            numberToConvert: 98
+        type: object
+    responses:
+      "200":
+        body:
+          example:
+            strict: true
+            value:
+              numberAsString: ninety eight
+          type: object
