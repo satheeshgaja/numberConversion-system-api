@@ -39,7 +39,7 @@
 						<workers>${workers}</workers>
 						<workerType>${worker.type}</workerType>
 						<applicationName>${application.name}</applicationName>
-						<!-- <businessGroupId>${business.group}</businessGroupId> -->
+						<businessGroupId>${business.group.id}</businessGroupId>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
